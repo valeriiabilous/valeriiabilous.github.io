@@ -1,0 +1,18 @@
+.flex-wrap-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint (md) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 35px 20px;
+    }
+
+    @include breakpoint (lg) {
+        flex-wrap: nowrap;
+        gap: 0 19px;
+    }
+}

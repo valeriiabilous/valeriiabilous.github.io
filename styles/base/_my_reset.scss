@@ -1,0 +1,21 @@
+@import '../fonts';
+
+body, html {
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+
+a {
+    @extend p;
+    text-decoration: none;
+
+}

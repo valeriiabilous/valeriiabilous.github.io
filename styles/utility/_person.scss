@@ -1,0 +1,83 @@
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 237px;
+    min-width: 221px;
+    text-align: center;
+    transition: all .4s ease;
+
+
+    @include breakpoint (lg) {
+        &:hover {
+            transform: scale(1.1);
+        }
+
+    }
+    @include breakpoint (xxl) {
+
+        &_xxl-order_1 {
+            order: 1;
+        }
+        &_xxl-order_2 {
+            order: 2;
+        }
+
+        &_xxl-order_3 {
+            order: 3;
+        }
+
+        &_xxl-order_4 {
+            order: 4;
+        }
+
+    }
+
+    &__avatar {
+        position: relative;
+    }
+
+    &__avatar-img {
+        border-radius: 50%;
+        @include w-h (120px, 120px);
+    }
+
+    &__icon {
+        position: absolute;
+        @include w-h (42px, 42px);
+        left: 83px;
+        top: 83px;
+        border: 5px solid $white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__icon_color-red {
+        background: $details-red;
+    }
+
+    &__icon_color-yellow {
+        background: $details-yellow;
+    }
+
+    &__icon_color-aqua {
+        background: $details-aqua;
+    }
+
+    &__icon_color-blue {
+        background: $details-blue;
+    }
+
+    &__name {
+        margin: 17px 0 0 0;
+    }
+
+    &__description {
+        font-size: 14px;
+        line-height: 100%;
+        color: $text;
+        margin: 24px 0 0 0;
+    }
+}

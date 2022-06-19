@@ -1,0 +1,143 @@
+.figure {
+    border-radius: 4px;
+    flex: 1 1 240px;
+    position: relative;
+    overflow: hidden;
+
+    @include breakpoint (md) {
+        flex: 1 1 33.333%;
+    }
+
+    @include breakpoint (lg) {
+            
+        &:hover {
+            .figure__back {
+                transform: scale(1.2);
+            }
+
+            .figure__marker {
+                @include w-h (75px, 25px);
+                font-size: 11px;
+            }
+
+            .figure__text {
+                font-size: 15px;
+            }
+
+            .figure__title {
+                font-size: 25px;
+            }
+
+
+            &::before {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+    
+        }
+    }
+
+    &::before {
+        content: '';
+        background-color: rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        transition: all .4s ease;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        height: 100%;
+        padding: 16px 30px 16px 20px;
+        @include breakpoint (xxl) {
+            padding: 21px 25px;
+        } 		
+    }
+
+    &__marker {
+        @include w-h (70px, 20px);
+        border-radius: 40px;
+        background-color: $details-red;
+        font-family: $title-font-family;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 2px;
+        color: $figure-text;
+        margin: 0 0 30px 0;	
+        transition: all .4s ease;
+        @include breakpoint (md) {
+            margin: 0 0 16px 0;
+        }		
+        @include breakpoint (xxl) {
+            margin: 0 0 30px 0;
+        }	
+    }
+
+    &__title {
+        font-family: $title-font-family;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 58%;
+        color: $white;
+        transition: all .4s ease;
+        @include breakpoint (xxl) {
+            line-height: 108%;
+        }
+
+    }
+
+    &__smaller-title {
+        @extend .figure__title;
+        line-height: 58%;
+    }
+
+    &__text {
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 100%;
+        margin: 22px 0 0 0;
+        color: $figure-text;
+        transition: all .4s ease;
+    }
+
+    &__back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -50;
+        transition: all .4s ease;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.figure-items {
+
+    display: flex;
+    min-height: 740px;
+    flex-direction: column;
+    gap: 10px 0;
+    
+    @include breakpoint (md) {
+        flex-direction: row;
+        gap: 0 20px;
+        min-height: 400px;
+    }
+        
+}

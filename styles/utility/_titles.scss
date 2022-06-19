@@ -1,0 +1,30 @@
+.important-title {
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: $white;
+
+    @include breakpoint (md) {
+        font-size: 52px;
+        line-height: 63px;
+    }
+}
+
+.second-title {
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+    color: $title;
+
+    @include breakpoint (xxl) {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+}
+
+.third-title {
+    font-size: 14px;
+    line-height: 17px;
+    color: $title;
+}

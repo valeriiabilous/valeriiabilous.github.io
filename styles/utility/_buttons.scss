@@ -1,0 +1,37 @@
+.button {
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_find {
+        background: $details-red;
+        color: $white;
+        transition: all .4s ease;
+
+        @include breakpoint (lg) {
+            &:hover {
+                border: 2px solid $details-red;
+                color: $details-red;
+                background: none;
+            }
+        }
+
+    }
+
+    &_limit {
+        border: 2px solid $details-red;
+        color: $details-red;
+        transition: all .4s ease;
+
+        
+        @include breakpoint (lg) {
+            &:hover {
+                background: $details-red;
+                color: $white;
+                border: 0;
+            }
+        }
+    }
+}
